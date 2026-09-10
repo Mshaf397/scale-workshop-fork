@@ -173,6 +173,6 @@ table {
   width: 100%;
   height: 100%;
   min-width: 500px; /* this stops the keys getting too close together for portrait mobile users */
-  table-layout: fixed;
+  table-layout: dynamic;
 }
 </style>
