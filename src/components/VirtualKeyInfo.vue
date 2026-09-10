@@ -25,10 +25,35 @@ const props = defineProps<{
 </template>
 
 <style scoped>
+.keyboard-grid {
+  display: grid;
+  /* 14 equal columns, 20 equal rows */
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  
+  /* Occupy the full viewport */
+  width: 100vw;
+  height: 100vh;
+  gap: 2px; /* Optional gap between keys */
+  box-sizing: border-box;
+}
+
+.key {
+  width: 100%;
+  height: 100%;
+  min-width: 0;  /* Prevents grid blowout from inner text */
+  min-height: 0; /* Prevents grid blowout from inner text */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .key-info {
-  font-size: 1.25em;
+  font-size: clamp(0.6rem, 1.5vh, 1.25em); /* Scales font size dynamically */
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
 }
+
 
 [data-theme='dark'] .key-info {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
