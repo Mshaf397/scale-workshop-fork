@@ -172,7 +172,7 @@ table {
   border-spacing: 0;
   width: 100%;
   height: 100%;
-  min-width: 500px; /* this stops the keys getting too close together for portrait mobile users */
-  table-layout: dynamic;
+  min-width: 300px; /* this stops the keys getting too close together for portrait mobile users */
+  table-layout: fixed;
 }
 </style>
